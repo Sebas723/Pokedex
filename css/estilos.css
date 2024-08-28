@@ -1,0 +1,96 @@
+:root{
+    --clr-black: #ececec;
+    --clr-white: #f7f7f7;
+
+    --type-normal: #ABAB78;
+    --type-fire: #F08030;
+    --type-water: #6890F0;
+    --type-grass: #78C850;
+    --type-electric: #F8D030;
+    --type-ice: #98D8D8;    
+    --type-fighting: #C03020;
+    --type-poisson: #A040A0;
+    --type-ground: #E0C068;
+    --type-flying: #A890F0;
+    --type-pyschic: #F85888;
+    --type-bug: #A8B820;
+    --type-rock: #88A038;
+    --type-ghost: #705898;
+    --type-dark: #705848;
+    --type-dragon: #7030F8;
+    --type-steel: #B8B8D0;
+    --type-fairy: #F0B6BC;
+}
+
+/* Define el estilo base para todos los botones */
+.btn-header {
+    width: 100px;
+    padding: 7px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.363);
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 1s, color 0.3s;
+}
+
+.btn-header:hover{
+    transform: scale(1.1);
+}
+  
+  /* Aplica colores específicos basados en las clases */
+  .normal { background-color: var(--type-normal); }
+  .fire { background-color: var(--type-fire); }
+  .water { background-color: var(--type-water); }
+  .grass { background-color: var(--type-grass); }
+  .electric { background-color: var(--type-electric); }
+  .ice { background-color: var(--type-ice); }
+  .fighting { background-color: var(--type-fighting); }
+  .poisson { background-color: var(--type-poisson); }
+  .ground { background-color: var(--type-ground); }
+  .flying { background-color: var(--type-flying); }
+  .psychic { background-color: var(--type-psychic); }
+  .bug { background-color: var(--type-bug); }
+  .rock { background-color: var(--type-rock); }
+  .ghost { background-color: var(--type-ghost); }
+  .dark { background-color: var(--type-dark); }
+  .dragon { background-color: var(--type-dragon); }
+  .steel { background-color: var(--type-steel); }
+  .fairy { background-color: var(--type-fairy); }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: sans-serif;
+}
+
+nav{
+    position: relative;
+    width: 100vw;
+    background-color: var(--clr-white);
+}
+
+nav img{
+    margin: 0.5% 0 0 20%;
+    width: 250px;
+    height: 100px;
+}
+
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 60%;
+    padding: 10px 30px 10px 30px;
+    margin: 0 auto;
+}
+
+.btn{
+}
+
+
