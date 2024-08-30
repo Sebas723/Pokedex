@@ -1,6 +1,6 @@
 :root{
-    --clr-black: #ececec;
     --clr-white: #f7f7f7;
+    --clr-gray: #e6e6e6;
 
     --type-normal: #ABAB78;
     --type-fire: #F08030;
@@ -32,6 +32,7 @@
     border: none;
     cursor: pointer;
     font-size: 16px;
+    text-transform: uppercase;
     transition: background-color 1s, color 0.3s;
 }
 
@@ -40,6 +41,7 @@
 }
   
   /* Aplica colores específicos basados en las clases */
+  .white{ background-color: var(--clr-white); }
   .normal { background-color: var(--type-normal); }
   .fire { background-color: var(--type-fire); }
   .water { background-color: var(--type-water); }
@@ -71,6 +73,7 @@ nav{
     position: relative;
     width: 100vw;
     background-color: var(--clr-white);
+    box-shadow: 0 0 10px 0 black;
 }
 
 nav img{
@@ -90,7 +93,84 @@ ul{
     margin: 0 auto;
 }
 
-.btn{
+ul #ver-todos{
+    width: 130px;
 }
+
+.contenedor{
+    background-color: var(--clr-gray);
+    width: 100vw;
+    height: auto;
+    padding: 1%;
+}
+
+.rounded{
+    padding: 1% 3% 1% 3%;
+    border-radius: 15px;
+}
+
+
+.cards{
+    position: relative;
+    width: 68%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    margin-top: 10px;
+}
+
+.card{
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    margin: 1%;
+    border-radius: 20px;
+    text-transform: uppercase;
+    isolation: isolate;
+}
+
+/* .text-back{
+    position: absolute;
+    top: 1rem;
+    left: 1.5%;
+    transform: translateX(1.5%);
+    font-size: 140px;
+    font-weight: 800;
+    z-index: -1;
+    color: var(--clr-white);
+} */
+
+.card .card-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.card .card-info{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+}
+
+.card .card-type{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px;
+}
+
+.card .card-statistics{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px;
+}
+
+
 
 
