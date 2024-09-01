@@ -1,3 +1,5 @@
+/* Estilos generales en todo el documento */
+
 :root{
     --clr-white: #f7f7f7;
     --clr-gray: #e6e6e6;
@@ -21,26 +23,9 @@
     --type-steel: #B8B8D0;
     --type-fairy: #F0B6BC;
 }
-
-/* Define el estilo base para todos los botones */
-.btn-header {
-    width: 100px;
-    padding: 7px;
-    border-radius: 15px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.363);
-    color: black;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    text-transform: uppercase;
-    transition: background-color 1s, color 0.3s;
-}
-
-.btn-header:hover{
-    transform: scale(1.1);
-}
   
-  /* Aplica colores específicos basados en las clases */
+  /* Aplicamos los colores creados anteriormente en "root" para cada clase */
+  .gray{ background-color: var(--clr-gray); }
   .white{ background-color: var(--clr-white); }
   .normal { background-color: var(--type-normal); }
   .fire { background-color: var(--type-fire); }
@@ -49,7 +34,7 @@
   .electric { background-color: var(--type-electric); }
   .ice { background-color: var(--type-ice); }
   .fighting { background-color: var(--type-fighting); }
-  .poisson { background-color: var(--type-poisson); }
+  .poison { background-color: var(--type-poisson); }
   .ground { background-color: var(--type-ground); }
   .flying { background-color: var(--type-flying); }
   .psychic { background-color: var(--type-psychic); }
@@ -61,6 +46,7 @@
   .steel { background-color: var(--type-steel); }
   .fairy { background-color: var(--type-fairy); }
 
+
 *{
     margin: 0;
     padding: 0;
@@ -69,6 +55,26 @@
     font-family: sans-serif;
 }
 
+.btn-header:hover{
+    transform: scale(1.1);
+}
+
+.rounded{
+    padding: 1% 3% 1% 3%;
+    border-radius: 15px;
+}
+
+.custom-hr{
+    height: 1px;
+    width: 70%;
+    background-color: black;
+    margin: 5px 0 5px 0;
+}
+
+/*------------------- Aqui terminan los estilos generales ---------------------*/
+
+
+/* Desde aqui empiezan los estilos para la barra de navegacion */
 nav{
     position: relative;
     width: 100vw;
@@ -97,18 +103,30 @@ ul #ver-todos{
     width: 130px;
 }
 
+.btn-header {
+    width: 100px;
+    padding: 7px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.363);
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 1s, color 0.3s;
+}
+
+/*------------------- Aqui terminan los estilos de la barra de navegacion ---------------------*/
+
+
+/* Desde aqui empiezan los estilos para las tarhetas y sus contenedores */
+
 .contenedor{
     background-color: var(--clr-gray);
     width: 100vw;
     height: auto;
     padding: 1%;
 }
-
-.rounded{
-    padding: 1% 3% 1% 3%;
-    border-radius: 15px;
-}
-
 
 .cards{
     position: relative;
@@ -128,9 +146,16 @@ ul #ver-todos{
     border-radius: 20px;
     text-transform: uppercase;
     isolation: isolate;
+    position: relative;
+    transition-duration: 0.5s;
 }
 
-/* .text-back{
+.card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.text-back{
     position: absolute;
     top: 1rem;
     left: 1.5%;
@@ -139,7 +164,7 @@ ul #ver-todos{
     font-weight: 800;
     z-index: -1;
     color: var(--clr-white);
-} */
+}
 
 .card .card-img{
     display: flex;
@@ -170,6 +195,88 @@ ul #ver-todos{
     justify-content: center;
     margin: 10px;
 }
+
+/*------------------- Aqui terminan los estilos de las tarjetas de cada pokemon y sus contenedores ---------------------*/
+
+
+/* Aqui empiezan los estilos para la ventana emergente en cada tarjeta de pokemon */
+.modal-container{
+    background-color: var(--clr-white);
+    position: fixed;
+    width: 55%;
+    top: 20%;
+    left: 22%;
+    border: dashed 1.5px gray;
+    border-radius: 20px;
+    padding: 50px 0;
+    display: flex;
+}
+
+.box{
+    display: flex;
+    gap: 1px;
+}
+
+.modal-container .modal-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 0 0 0 20px; 
+}
+
+.modal-container .modal-img img{
+    width: 70%;
+}
+
+.modal-container .modal-info{
+    width: 50%;
+    padding: 20px;
+    margin-top: -5%;
+    border-radius: 0 20px 20px 0; 
+}
+
+.modal-container .modal-info .modal-pokemon-id p{
+    gap: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.modal-container .modal-info .modal-type p{
+    gap: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.modal-container .modal-info .modal-statistics p{
+    gap: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.modal-container .modal-info p{
+    font-size: 18px;
+    margin: 10px 0 10px 0;
+}
+
+.close{
+    width: 150px;
+    padding: 12px;
+    background-color: var(--type-water);
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+    margin: auto;
+    transition-duration: 0.5s;
+}
+
+.close:hover{
+    background-color: rgb(34, 155, 235);
+    color: white;
+    cursor: pointer;
+}
+
+/*------------------- Aqui terminan los estilos de la ventana emergente ---------------------*/
 
 
 
